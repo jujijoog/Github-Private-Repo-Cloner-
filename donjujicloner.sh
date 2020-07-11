@@ -22,7 +22,7 @@ echo 'Uploading SSH To Account'
 
 curl -u "$userpass" --data '{"title":"test-key","key":"'"$(cat ~/.ssh/id_rsa.pub)"'"}' https://api.github.com/user/keys
 
-echo 'Downloading Repos'
+echo 'Downloading Repo List'
 
 curl -u "$userpass" https://api.github.com/user/repos?private=true > repos.txt
 
